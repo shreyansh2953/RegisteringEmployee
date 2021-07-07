@@ -1,0 +1,78 @@
+<div class="container">
+    <table>
+        <tr>
+
+            <th>Name</th>
+            <th>Office</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor = 'let item of employeeList'>
+            <td>{{item.name}}</td>
+            <td>{{item.office}}</td>
+            <td>{{item.position}}</td>
+            <td>{{item.salary}}</td>
+            <td><button mat-raised-button (click)="showtext(item)" id="del"><mat-icon>border_color</mat-icon></button></td>
+            <td><button mat-raised-button (click)="getid(item._id)"><mat-icon>delete</mat-icon></button></td>
+            
+
+        </tr>
+    </table>
+</div>
+
+<!-- edit form -->
+<div class="container" *ngIf="show">
+    <ng-template #elseblock>
+      <div class="elseblock">
+          
+      </div>  
+    </ng-template>
+
+        <form  autocomplete="off" [formGroup]="editemployeeForm"  >
+            <div id="message" *ngIf="msg">
+                {{message}}
+            </div>
+        
+            <div class="set">
+                <label >Name</label>
+                <input type="text" formControlName="name" id="maths" required>
+                <div>
+
+                    <!-- <span *ngIf="name.touched && name.invalid">This is required feild*</span> -->
+                </div>
+            </div>
+
+            <div class="set">
+                <label >Office</label>
+                <input type="text" formControlName="office" id="physics" required>
+                <div>
+
+                    <!-- <span *ngIf="office.touched && office.invalid">This is required feild*</span> -->
+                </div>
+            </div>
+
+            <div class="set">
+                <label >Position</label>
+                <input type="text" formControlName="position" id="computer" required>
+                <div>
+
+                    <!-- <span *ngIf="position.touched && position.invalid">This is required feild*</span> -->
+                </div>
+            </div>
+
+            <div class="set">
+                <label >Salary</label>
+                <input type="text" formControlName="salary" id="web" required >
+                <div>
+
+                    <!-- <span *ngIf="salary.touched && salary.invalid">This is required feild*</span> -->
+                </div>
+            </div>
+            <div id="button">
+
+                <button id="btn" mat-raised-button  (click)="edit(editemployeeForm.value)" *ngIf="editemployeeForm.valid; else elseblock"><strong>Submit</strong></button>
+            </div>
+        </form>
+</div>

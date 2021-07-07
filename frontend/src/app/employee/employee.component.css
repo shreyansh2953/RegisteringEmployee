@@ -1,0 +1,97 @@
+.container{
+    /* border: 2px solid red; */
+    margin-top: 1.5rem;
+    padding: 20px;
+    padding-bottom: 5px;
+    padding-top: 0px;   
+    background-color :antiquewhite;    
+}
+
+.set{
+    margin-top: 25px;
+    margin: 25px 0px;
+    padding: 3px;
+    display: flex;
+    /* border: 2px solid black; */
+    width: 100%;
+}
+
+#computer{
+    margin-left: 256px ;
+    
+    
+    
+}
+label{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#web{
+           margin-left: 269px ;
+}
+#maths{
+           margin-left: 272px ;
+}
+#physics{
+              margin-left: 272px ;
+}
+
+.set input{
+    
+    width: 30%;
+    padding: 7px 0px;
+    outline: none;
+    border-bottom: 2.5px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right:0px ;
+    background-color: antiquewhite;
+    font-size: 15px;
+}
+.set input:hover{
+
+    border-bottom: 2.2px solid burlywood;
+    border-top: 0px;
+    border-left: 0px;
+    border-right:0px ;
+}
+
+
+#btn{
+    outline: none;
+    margin-top: 20px;
+    margin-right: 300px;
+    border: 2px solid black;
+    padding: 0px 10px;
+    border-radius: 5px;
+     /* background-color: rgb(117, 113, 113); */
+     cursor: pointer;
+     color: black;
+     font-size: 17px;  
+}
+#btn:hover{
+    background-color: antiquewhite;
+}
+#button{
+    /* border: 2px solid red; */
+    display: flex;
+  justify-content: center;
+}
+
+span{
+    font-size: 12px;
+    display: block;
+    color: red;
+}
+
+#message{
+    border: 2px solid rgb(122, 223, 122);
+    background-color:rgb(69, 212, 69);
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    color: antiquewhite;
+    
+}

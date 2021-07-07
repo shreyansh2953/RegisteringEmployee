@@ -1,0 +1,55 @@
+
+    <div class="container">
+        <ng-template #elseblock>
+          <div class="elseblock">
+              
+          </div>  
+        </ng-template>
+
+            <form  autocomplete="off" [formGroup]="employeeForm" (ngSubmit)='addvalue()'>
+                <div id="message" *ngIf="msg">
+                    {{message}}
+                    <button mat-button id="mat-button"><mat-icon>home</mat-icon></button>
+                </div>
+            
+                <div class="set">
+                    <label >Name</label>
+                    <input type="text" formControlName="name" id="maths" required>
+                    <div>
+
+                        <span *ngIf="name.touched && name.invalid">This is required feild*</span>
+                    </div>
+                </div>
+    
+                <div class="set">
+                    <label >Office</label>
+                    <input type="text" formControlName="office" id="physics" required>
+                    <div>
+
+                        <span *ngIf="office.touched && office.invalid">This is required feild*</span>
+                    </div>
+                </div>
+    
+                <div class="set">
+                    <label >Position</label>
+                    <input type="text" formControlName="position" id="computer" required>
+                    <div>
+
+                        <span *ngIf="position.touched && position.invalid">This is required feild*</span>
+                    </div>
+                </div>
+    
+                <div class="set">
+                    <label >Salary</label>
+                    <input type="text" formControlName="salary" id="web" required >
+                    <div>
+
+                        <span *ngIf="salary.touched && salary.invalid">This is required feild*</span>
+                    </div>
+                </div>
+                <div id="button">
+    
+                    <button id="btn" mat-raised-button *ngIf="employeeForm.valid; else elseblock"><strong>Submit</strong></button>
+                </div>
+            </form>
+    </div>
